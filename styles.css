@@ -1,0 +1,104 @@
+/* Basic CSS Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Menu Styles */
+.menu ul {
+  list-style-type: none;
+  padding: 10px;
+  background-color: #007bff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  margin: 0 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Container and Form Styles */
+.container {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+/* Task List Styles */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Card Styles */
+.card {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Card Layouts */
+@media (min-width: 768px) {
+  .cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards .card:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cards .card:nth-child(3) {
+    grid-column: auto;
+  }
+}
